@@ -11,7 +11,7 @@ async function getUserByUsername(username) {
         return user; // Return the user object if found
     } catch (error) {
         console.error('Error fetching user:', error.message || error);
-        throw error; // Propagate the error to be handled in the controller
+        throw error; 
     }
 }
 
