@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <script src="./script.js" defer></script>
+
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+
+  <!-- Section to display all requests -->
+  <section id="requests-section">
+    <h2>All Maintenance Requests</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Address</th>
+          <th>Issue</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="requests-table-body">
+        <!-- Requests will be dynamically inserted here -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Form for updating the request -->
+  <section id="update-section" style="display: none" >
+    <h2>Update Request</h2>
+    <form id="update-request-form">
+      <input type="hidden" id="request-id" />
+      <p><strong>Request ID:</strong> <span id="request-issue"></span></p>
+      <label for="status">Status:</label>
+      <select id="status" name="status">
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <button type="submit">Update Request</button>
+      <button type="button" id="cancel-update">Cancel</button>
+    </form>
+  </section>
+
+</body>
+</html>
